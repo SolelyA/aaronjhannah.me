@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div class="menu-tog ">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class='wrapper'>   
+        <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path class="path" stroke="black" fill='#bd230b' stroke-width="3px" dur="10s" vector-effect="non-scaling-stroke" 
+          d="M 0 100 L 100 100 100 100 0 100 C 0 0, 0 0, 0 100"/>
+            <animateMotion dur="10s" repeatCount="indefinite">
+              <mpath xlink:href="#path" />
+            </animateMotion>
+        </svg>
+        <ul>
+            <li><a href="{% url 'home' %}" class="navbar-item">HOME</a></li>
+            <li><a href="{% url 'about' %}" class="navbar-item">ABOUT</a></li>
+            <li><a href="{% url 'project' %}" class="navbar-item">PROJECTS</a></li>
+            <li><a href="{% url 'contact' %}" class="navbar-item">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <script src="{% static 'hello/layout.js' %}"></script>
+      
+<div class="body-content">
+    {% block content %}
+    {% endblock %}
+    <hr/>
+    <div class = "footer">
+        <p>© 2022</p>
+    </div>
+</div>
+</body>
+</html>

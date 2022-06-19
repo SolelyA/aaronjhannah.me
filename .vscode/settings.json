@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "/Users/aaron/opt/anaconda3/bin/python",
+    "git.enableSmartCommit": true,
+    "git.enabled": true
+}

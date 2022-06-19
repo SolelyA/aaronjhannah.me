@@ -1,0 +1,14 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+
+
+    <div class = "homePageText">
+        {% load static %}
+        <script src="{% static 'hello/layout.js' %}"></script>
+        <h1>Hey, Aaron here</h1>
+    </div>
+    
+{% endblock %}
