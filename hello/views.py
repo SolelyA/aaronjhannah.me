@@ -6,8 +6,6 @@ from django.shortcuts import redirect
 from hello.models import LogMessage
 from django.views.generic import ListView
 
-def splashPage(request):
-    return render(request, "hello/splashPage.html")
 
 def home(request):
     return render(request, "hello/home.html")
